@@ -1,13 +1,13 @@
-import React from "react";
-import { SpecialButton } from "./SpecialButton";  
+import React, {useState} from "react";
+import { SpecialButton } from "./SpecialButton"; 
+import { specials } from "/Users/Dtown/Documents/GitHub/Marketing-PageNoFork/lambda-calculator/src/data"; 
 //import any components needed
 
 //Import your array data to from the provided data file
 
 export const Specials = () => {
   // STEP 2 - add the imported data to state
-  const specials = ["C", "+/-", "%"];
-
+  const [specDef, specChange] = useState(specials);
   return (
     <div>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button

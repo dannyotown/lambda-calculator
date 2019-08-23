@@ -3,7 +3,6 @@ import "./App.css";
 import { Numbers } from "../src/components/ButtonComponents/NumberButtons/Numbers"
 import { Display } from "../src/components/DisplayComponents/Display";
 import { Specials } from "./components/ButtonComponents/SpecialButtons/Specials";
-import { numbers, operators, specials } from "./data";
 
 
 // STEP 4 - import the button and display components
@@ -20,12 +19,13 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [zeroDisplay, displayNumber] = useState(0);
+  const [number, NumberPressed] = useState(0);
   return (
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display />
+        <Display text={zeroDisplay} />
         <div className="flexContainer">
           <div className="buttonContainer">
             <Specials />
