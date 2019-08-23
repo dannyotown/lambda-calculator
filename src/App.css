@@ -1,0 +1,48 @@
+
+.container{
+    width: 400px;
+    height: 30%;
+    background-color:#e82e2e; 
+    border-radius: 10px;
+    padding: 1%;
+}
+.numberButton{
+    width: 75px;
+    height: 75px;
+    margin:4% 1% 2% 1%;
+    border-radius: 40px;
+    background-color:#0d08bd;
+    color: white;
+}
+.App{
+margin: 5% 5% 5% 5%;
+
+}
+.displayScreen{
+    width: 95%;
+    height: 60px;
+    border-radius: 15px;
+    background-color: darkgrey;
+    margin: 0 auto;
+}
+
+.specialButton{
+    width: 75px;
+    height: 75px;
+    margin:0% 1% 0% 1%;
+    border-radius: 40px;
+    background-color:#0d08bd;
+    color: white;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 4% 0% 4% 0%;
+}
+.operatorButton{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    background-color: lightskyblue;
+
+}
