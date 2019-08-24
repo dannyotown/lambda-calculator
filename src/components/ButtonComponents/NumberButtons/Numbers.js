@@ -6,7 +6,7 @@ import { numbers } from "/Users/Dtown/Documents/GitHub/Marketing-PageNoFork/lamb
 
 //Import your array data to from the provided data file
 
-export const Numbers = () => {
+export const Numbers = ({changeButtonDisplay}) => {
   // STEP 2 - add the imported data to state
   const [numDef, numChange] = useState(numbers);
   return (
@@ -16,9 +16,9 @@ export const Numbers = () => {
        it any props needed by the child component*/}
        {numbers.map((num,index)=>{
          if(num === "0"){
-          return <NumberButton key={index} text={num} value="specialClass" />
+          return <NumberButton key={index} text={num} id="specialClass" value={changeButtonDisplay} />
          }else{
-          return <NumberButton key={index} text={num} />
+          return <NumberButton key={index} text={num} value={changeButtonDisplay} />
          }
        })}
     </div>

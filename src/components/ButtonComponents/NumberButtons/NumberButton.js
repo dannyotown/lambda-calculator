@@ -5,7 +5,7 @@ export const NumberButton = (props) => {
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */
         
-        <button className="numberButton" id={props.value}><span>{props.text}</span></button>
+        <button className="numberButton" id={props.id} value={props.text} onClick={props.value}><span>{props.text}</span></button>
       }
     </>
   );
