@@ -20,7 +20,6 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [zeroDisplay, displayNumber] = useState(0);
   const changeButtonDisplay = e =>{
-    console.log(`button pressed: ${e.target.value}`);
     displayNumber(e.target.value); 
   }
   return (
