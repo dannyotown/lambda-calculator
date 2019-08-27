@@ -19,9 +19,18 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [zeroDisplay, displayNumber] = useState(0);
-  const changeButtonDisplay = e =>{
-    displayNumber(e.target.value); 
+  const buttonDisplay = e =>{
+    displayNumber(displayNumber + e.target.value)
   }
+  const changeButtonDisplay = e =>{
+    displayNumber("");
+    displayNumber(zeroDisplay + e.target.value); 
+  }
+  const clearDisplay = () =>{
+    displayNumber(0);
+  }
+  
+
   return (
     <div className="container">
       <Logo />
@@ -30,7 +39,7 @@ function App() {
         <Display text={zeroDisplay} />
         <div className="flexContainer">
           <div className="buttonContainer">
-            <Specials />
+            <Specials clearDisplay={clearDisplay}/>
             <Numbers changeButtonDisplay={changeButtonDisplay}/>
           </div>
           <div className="specialContainer">

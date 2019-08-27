@@ -5,7 +5,7 @@ import { specials } from "/Users/Dtown/Documents/GitHub/Marketing-PageNoFork/lam
 
 //Import your array data to from the provided data file
 
-export const Specials = () => {
+export const Specials = ({clearDisplay}) => {
   // STEP 2 - add the imported data to state
   const [specDef, specChange] = useState(specials);
   return (
@@ -16,7 +16,7 @@ export const Specials = () => {
        
        {specials.map((num,index)=>{
         
-        return <SpecialButton key={index} text={num} />
+        return <SpecialButton key={index} text={num} clearDisplay={clearDisplay} />
         
        })}
        
